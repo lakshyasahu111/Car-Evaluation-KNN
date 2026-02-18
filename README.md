@@ -1,78 +1,95 @@
-🚗 Car Evaluation Predictor (KNN)
+---
 
-A machine learning project that uses the K-Nearest Neighbors (KNN) algorithm to classify the acceptability of cars based on several technical and price-related attributes.
-📊 Dataset Overview
+# 🚗 Car Evaluation Predictor (KNN)
 
-The Car Evaluation Dataset is a classic multi-attribute decision-making dataset from the UCI Machine Learning Repository.
+A machine learning project that uses the **K-Nearest Neighbors (KNN)** algorithm to classify the acceptability of cars based on several technical and price-related attributes.
 
-    Source: UCI Machine Learning Repository - Car Evaluation
+## 📊 Dataset Overview
 
-    Instances: 1,728
+The **Car Evaluation Dataset** is a classic multi-attribute decision-making dataset from the UCI Machine Learning Repository.
 
-    Attributes: 6 categorical features
+* **Source:** [UCI Machine Learning Repository - Car Evaluation](https://archive.ics.uci.edu/dataset/19/car+evaluation)
+* **Instances:** 1,728
+* **Attributes:** 6 categorical features
+* **Target:** `class` (unacc, acc, good, vgood)
 
-    Target: class (unacc, acc, good, vgood)
+### Features Description:
 
-Features Description:
-Feature	Description	Values
-buying	Buying price	vhigh, high, med, low
-maint	Price of maintenance	vhigh, high, med, low
-doors	Number of doors	2, 3, 4, 5-more
-persons	Capacity (persons)	2, 4, more
-lug_boot	Size of luggage boot	small, med, big
-safety	Estimated safety	low, med, high
-🧠 Model Explanation: K-Nearest Neighbors
+| Feature | Description | Values |
+| --- | --- | --- |
+| `buying` | Buying price | vhigh, high, med, low |
+| `maint` | Price of maintenance | vhigh, high, med, low |
+| `doors` | Number of doors | 2, 3, 4, 5-more |
+| `persons` | Capacity (persons) | 2, 4, more |
+| `lug_boot` | Size of luggage boot | small, med, big |
+| `safety` | Estimated safety | low, med, high |
 
-This project implements KNN, a non-parametric classification algorithm.
+---
 
-How it works:
-The model classifies a car by looking at the K most similar cars in the training data (its "neighbors"). It calculates the "distance" between car attributes to determine similarity.
+## 🧠 Model Explanation: K-Nearest Neighbors
 
-We use Euclidean Distance to find the closest points:
-d(x,y)=i=1∑n​(xi​−yi​)2​
-🚀 Getting Started
-Prerequisites
+This project implements **KNN**, a non-parametric classification algorithm.
+
+**How it works:**
+The model classifies a car by looking at the  most similar cars in the training data (its "neighbors"). It calculates the "distance" between car attributes to determine similarity.
+
+We use **Euclidean Distance** to find the closest points:
+
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
 
 Ensure you have Python installed. You will need the following libraries:
-Bash
 
+```bash
 pip install numpy pandas scikit-learn
 
-Installation
+```
 
-    Clone the repository:
-    Bash
+### Installation
 
-    git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
-    cd YOUR_REPO_NAME
+1. Clone the repository:
+```bash
+git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
+cd YOUR_REPO_NAME
 
-    Run the script:
-    Bash
+```
 
-    python KNN.py
 
-🛠 Project Structure
-Plaintext
+2. Run the script:
+```bash
+python KNN.py
 
+```
+
+
+
+---
+
+## 🛠 Project Structure
+
+```text
 .
 ├── KNN.py                 # Main Python script for training and evaluation
 ├── car+evaluation/
 │   └── car.data           # The raw dataset file
 └── README.md              # Project documentation
 
-📈 Results
+```
 
-The model's performance is measured using Accuracy Score.
+## 📈 Results
 
-    Current Accuracy: ~80-90% (Depending on K-value and feature selection)
+The model's performance is measured using **Accuracy Score**.
 
-    Preprocessing: Used LabelEncoder to convert categorical text data into numerical values for mathematical processing.
+* **Current Accuracy:** ~80-90% (Depending on K-value and feature selection)
+* **Preprocessing:** Used `LabelEncoder` to convert categorical text data into numerical values for mathematical processing.
 
-🤝 Contributing
+---
 
-Contributions, issues, and feature requests are welcome! Feel free to check the issues page.
-📜 License
 
-This project is licensed under the CC BY 4.0 license — see the UCI Repository for more details.
+---
 
-Next Step: Since your code currently only uses 3 features (buying, main, safety), would you like me to help you update the script to use all 6 features? This usually jumps the accuracy from ~80% to over 95%!
+**Next Step:** Since your code currently only uses 3 features (`buying`, `main`, `safety`), would you like me to help you update the script to use **all 6 features**? This usually jumps the accuracy from ~80% to over 95%!
