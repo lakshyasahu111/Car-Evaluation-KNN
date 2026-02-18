@@ -88,8 +88,3 @@ The model's performance is measured using **Accuracy Score**.
 * **Preprocessing:** Used `LabelEncoder` to convert categorical text data into numerical values for mathematical processing.
 
 ---
-
-
----
-
-**Next Step:** Since your code currently only uses 3 features (`buying`, `main`, `safety`), would you like me to help you update the script to use **all 6 features**? This usually jumps the accuracy from ~80% to over 95%!
